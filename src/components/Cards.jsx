@@ -5,24 +5,32 @@ function Cards() {
 
     const link = 'https://pokeapi.co/api/v2/pokemon/'
 
-    const [pokemonList, setPokemonList] = useState(["ditto", "charizard", "squirtle", "pikachu", "magnemite", "arbok", "venusaur", "machamp", "zapdos", "mewtwo"])
+    const [pokemonNames, setPokemonNames] = useState(["Ditto", "Charizard", "Squirtle", "Pikachu", "Magnemite", "Arbok", "Venusaur", "Machamp", "Zapdos", "Mewtwo"])
 
+    const [pokemonImages, setPokemonImages] = useState([])
     const [image, setImage] = useState(null);
 
-    async function getImage(pokemon) {
+    async function getImages() {
+
+      let images = []
+      for (const pokemon of pokemonNames) {
         try {
             const res = await fetch(link+pokemon);
             const json = await res.json();
-            setImage(json.sprites.other['official-artwork'].front_default);
+            images.push(json.sprites.other['official-artwork'].front_default)
         } catch (error) {
             console.error(error)
         }
+      }
+      
+      setPokemonImages(images)
     }
 
     useEffect(() => {
-        getImage("mew")
+        getImages()
     }, [])
 
+    console.log(pokemonImages)
     return (
         <>
             {image ? <img src={image}/> : "Loading"}
