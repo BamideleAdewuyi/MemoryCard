@@ -37,7 +37,8 @@ function Grid({stateFunction, state}) {
 
     useEffect(() => {
         getRandomImages()
-    }, [])
+    }, [state])
+
     return (
         <div className='grid'>
             {Array.from({length: pokemonImages.length}).map((_, index) => 
