@@ -41,9 +41,9 @@ function Grid() {
 
     console.log(pokemonImages)
     return (
-        <>
-            {image ? <img src={image}/> : "Loading"}
-        </>
+        <div className='grid'>
+            
+        </div>
     )
 }
 
