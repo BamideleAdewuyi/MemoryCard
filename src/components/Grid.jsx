@@ -1,4 +1,5 @@
 import './Grid.css'
+import Card from './Card';
 import { useState, useEffect } from 'react';
 
 function Grid() {
@@ -8,7 +9,6 @@ function Grid() {
     const pokemonNames = (["Ditto", "Charizard", "Squirtle", "Pikachu", "Magnemite", "Arbok", "Venusaur", "Machamp", "Zapdos", "Mewtwo"])
 
     const [pokemonImages, setPokemonImages] = useState([])
-    const [image, setImage] = useState(null);
 
     function shuffle(arr) {
         for (let i = arr.length - 1; i > 0; i--) {
@@ -38,11 +38,16 @@ function Grid() {
     useEffect(() => {
         getRandomImages()
     }, [])
-
-    console.log(pokemonImages)
     return (
         <div className='grid'>
-            
+            {Array.from({length: pokemonImages.length}).map((_, index) => 
+            <div key={`pokemon${index}`}>
+                <Card
+                name={pokemonImages[index].name}
+                url={pokemonImages[index].url}
+                />
+            </div>
+            )}
         </div>
     )
 }
