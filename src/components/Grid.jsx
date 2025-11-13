@@ -25,7 +25,8 @@ function Grid() {
         try {
             const res = await fetch(link+pokemon);
             const json = await res.json();
-            images.push(json.sprites.other['official-artwork'].front_default)
+            images.push({name: pokemon,
+                url: json.sprites.other['official-artwork'].front_default})
         } catch (error) {
             console.error(error)
         }
