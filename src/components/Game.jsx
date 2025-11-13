@@ -4,9 +4,13 @@ import Scoreboard from './Scoreboard';
 import { useState } from 'react';
 
 function Game() {
+    const [currentScore, setCurrentScore] = useState(0);
+    const [highScore, setHighScore] = useState(0);
     return (
         <>
-        <Scoreboard/>
+        <Scoreboard
+        currentScore={currentScore}
+        highScore={highScore}/>
         <Grid/>
         </>
     )
