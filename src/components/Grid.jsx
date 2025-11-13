@@ -2,7 +2,7 @@ import './Grid.css'
 import Card from './Card';
 import { useState, useEffect } from 'react';
 
-function Grid() {
+function Grid({stateFunction, state}) {
 
     const link = 'https://pokeapi.co/api/v2/pokemon/'
 
