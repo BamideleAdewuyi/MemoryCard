@@ -45,6 +45,7 @@ function Grid({stateFunction, state}) {
                 <Card
                 name={pokemonImages[index].name}
                 url={pokemonImages[index].url}
+                stateFunction={stateFunction}
                 />
             </div>
             )}
