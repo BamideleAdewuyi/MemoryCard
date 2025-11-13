@@ -6,6 +6,7 @@ import { useState } from 'react';
 function Game() {
     const [currentScore, setCurrentScore] = useState(0);
     const [highScore, setHighScore] = useState(0);
+    const [guessed, setGuessed] = useState([]);
     return (
         <>
         <Scoreboard
