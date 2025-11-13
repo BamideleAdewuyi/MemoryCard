@@ -10,8 +10,16 @@ function Cards() {
     const [pokemonImages, setPokemonImages] = useState([])
     const [image, setImage] = useState(null);
 
-    async function getImages() {
+    function shuffle(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            let temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+    }
 
+    async function getRandomImages() {
       let images = []
       for (const pokemon of pokemonNames) {
         try {
@@ -22,12 +30,12 @@ function Cards() {
             console.error(error)
         }
       }
-      
+      shuffle(images);
       setPokemonImages(images)
     }
 
     useEffect(() => {
-        getImages()
+        getRandomImages()
     }, [])
 
     console.log(pokemonImages)
