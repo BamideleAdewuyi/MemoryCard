@@ -1,0 +1,19 @@
+.pokemonCard, img {
+    width: 20rem;
+}
+
+.pokemonCard {
+    outline: 3px solid black;
+    height: 24rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+}
+
+img {
+    height: 20rem;
+}
+
+h4 {
+    font-family: "futura";
+    text-align: center;
+}
