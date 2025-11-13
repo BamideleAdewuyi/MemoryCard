@@ -1,12 +1,12 @@
 import './Game.css'
-import Cards from './Cards';
+import Grid from './Grid';
 import Scoreboard from './Scoreboard';
 
 function Game() {
     return (
         <>
         <Scoreboard/>
-        <Cards/>
+        <Grid/>
         </>
     )
 }

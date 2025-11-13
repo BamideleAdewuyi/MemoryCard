@@ -1,7 +1,7 @@
-import './Cards.css'
+import './Grid.css'
 import { useState, useEffect } from 'react';
 
-function Cards() {
+function Grid() {
 
     const link = 'https://pokeapi.co/api/v2/pokemon/'
 
@@ -46,4 +46,4 @@ function Cards() {
     )
 }
 
-export default Cards;
+export default Grid;
