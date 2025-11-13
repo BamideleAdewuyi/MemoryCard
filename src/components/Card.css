@@ -9,6 +9,10 @@
     margin-bottom: 1rem;
 }
 
+.pokemonCard:hover {
+    box-shadow: 0 0 0.5rem 0.5rem gold;
+}
+
 img {
     height: 20rem;
 }
