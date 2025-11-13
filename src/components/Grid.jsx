@@ -5,7 +5,7 @@ function Grid() {
 
     const link = 'https://pokeapi.co/api/v2/pokemon/'
 
-    const [pokemonNames, setPokemonNames] = useState(["Ditto", "Charizard", "Squirtle", "Pikachu", "Magnemite", "Arbok", "Venusaur", "Machamp", "Zapdos", "Mewtwo"])
+    const pokemonNames = (["Ditto", "Charizard", "Squirtle", "Pikachu", "Magnemite", "Arbok", "Venusaur", "Machamp", "Zapdos", "Mewtwo"])
 
     const [pokemonImages, setPokemonImages] = useState([])
     const [image, setImage] = useState(null);
